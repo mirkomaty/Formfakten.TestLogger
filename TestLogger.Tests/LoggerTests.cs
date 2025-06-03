@@ -75,13 +75,16 @@ namespace TestLogger.Tests
 			logs = Logger.FindLogsWithScopeState( "Scope 1" );
 			Assert.That( logs.Count == 1 );
 
+			logs = Logger.FindLogsWithLevel( LogLevel.Error );
+			Assert.That( logs.Count == 1 );
+
 			logs = Logger.FindLogsWithScope( 2 );
 			Assert.That( logs.Count == 0 );
 
 			logs = Logger.FindLogsWithScopeState( "Scope 2" );
 			Assert.That( logs.Count == 0 );
 
-			Logger.ClearTestLogs();
+			Logger.ClearLogs();
 
 			logs = Logger.FindLogsWithScope( 1 );
 			Assert.That( logs.Count == 0 );

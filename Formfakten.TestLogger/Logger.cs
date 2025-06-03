@@ -44,7 +44,7 @@ namespace Formfakten.TestLogger
 			testLogs.Add( new LogEntry { Text = $"{prefix}{formatter( state, exception )}", LogLevel = logLevel, ScopeId = scopeId, ScopeState = scopeState } );
 		}
 
-		public static void ClearTestLogs()
+		public static void ClearLogs()
 		{
 			testLogs = new List<LogEntry>();
 		}
@@ -69,6 +69,10 @@ namespace Formfakten.TestLogger
 			return testLogs.FindAll( l => l.ScopeState == scopeState );
 		}
 
+		public static List<LogEntry> FindLogsWithLevel( LogLevel logLevel )
+		{
+			return testLogs.FindAll( l => l.LogLevel == logLevel );
+		}
 
 		public bool IsEnabled( LogLevel logLevel )
 		{
