@@ -32,7 +32,7 @@ After initialization you can use the logger:
 ```
 // Assume your current class is called LoggerTests
 var logger = globalServiceProvider.GetService<ILogger<LoggerTests>>();
-logger!.LogInformation( "This is an info log" );
+logger.LogInformation( "This is an info log" );
 var logs = Logger.FindLogsWith( "This is an info log" );
 Assert.That( logs.Count > 0 );
 var logEntry = logs[0];
