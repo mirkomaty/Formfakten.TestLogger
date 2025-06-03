@@ -25,7 +25,7 @@ var host = builder.Build();
 this.globalServiceProvider = host.Services;
 ```
 
-Note the call of `b.AddFormfaktenLogger()`. In tests it might be useful to keep the ServiceProvider in a global variable, so that the instance is kept in memory.
+Note the call of `b.AddFormfaktenLogger()`. In test projects it might be useful to keep the ServiceProvider in a global variable, so that the instance is kept in memory.
 
 After initialization you can use the logger:
 
