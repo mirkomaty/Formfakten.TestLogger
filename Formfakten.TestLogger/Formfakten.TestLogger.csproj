@@ -11,6 +11,7 @@
     <Copyright>(c) 2025 Mirko Matytschak</Copyright>
     <PackageProjectUrl>https://github.com/mirkomaty/Formfakten.TestLogger</PackageProjectUrl>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 	
 	<ItemGroup Condition="'$(TargetFramework)'=='net8.0'">
